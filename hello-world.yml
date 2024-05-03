@@ -1,0 +1,13 @@
+jobs:
+- name: hello-world-job
+- plan:
+  - task: hello-world-task
+    config: 
+     platform: linux
+     image-source:
+      type: registry-image
+      source:
+       repository: busybox
+     run:
+      path: echo
+      args: ["Hello world!!"]
